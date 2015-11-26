@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="FirstEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SecondEntity" inverseName="info" inverseEntity="SecondEntity" syncable="YES"/>
+    </entity>
+    <entity name="SecondEntity" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FirstEntity" inverseName="details" inverseEntity="FirstEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FirstEntity" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="SecondEntity" positionX="261" positionY="-6" width="128" height="73"/>
+    </elements>
+</model>
